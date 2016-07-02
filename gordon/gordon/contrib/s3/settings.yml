@@ -1,0 +1,19 @@
+lambdas:
+
+  bucket_notification_configuration:
+    code: bucket_notification_configuration
+    handler: bucket_notification_configuration.handler
+    runtime: python2.7
+    description: Manages Bucket Notification Configurations
+    timeout: 300
+    cli-output: False
+    policies:
+      manage_bucket_notification:
+        Version: "2012-10-17"
+        Statement:
+          -
+            Action:
+              - "s3:PutBucketNotification"
+              - "s3:GetBucketNotification"
+            Resource: "arn:aws:s3:::*"
+            Effect: "Allow"

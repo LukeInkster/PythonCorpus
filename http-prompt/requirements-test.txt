@@ -1,0 +1,4 @@
+mock
+pexpect
+pytest
+pytest-cov

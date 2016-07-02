@@ -1,0 +1,24 @@
+---
+project: s3example
+default-region: us-east-1
+code-bucket: gordon-s3-0do1mc7
+apps:
+  - gordon.contrib.helpers
+  - gordon.contrib.lambdas
+  - gordon.contrib.s3
+  - exampleapp
+
+# http://docs.aws.amazon.com/AmazonS3/latest/dev/NotificationHowTo.html
+s3:
+  example_s3_integration:
+    bucket: us-east-1-gordon-test
+    notifications:
+
+      3consumer_on_create_and_delete:
+
+        lambda: exampleapp.s3consumer
+        events:
+          - s3:ObjectCreated:*
+          - s3:ObjectRemoved:*
+        key_filters:
+          suffix: .png

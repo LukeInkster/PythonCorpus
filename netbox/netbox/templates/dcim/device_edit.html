@@ -1,0 +1,43 @@
+{% extends 'utilities/obj_edit.html' %}
+{% load form_helpers %}
+
+{% block form %}
+    <div class="panel panel-default">
+        <div class="panel-heading"><strong>Device</strong></div>
+        <div class="panel-body">
+            {% render_field form.name %}
+            {% render_field form.device_role %}
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading"><strong>Hardware</strong></div>
+        <div class="panel-body">
+            {% render_field form.manufacturer %}
+            {% render_field form.device_type %}
+            {% render_field form.serial %}
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading"><strong>Location</strong></div>
+        <div class="panel-body">
+            {% render_field form.site %}
+            {% render_field form.rack %}
+            {% render_field form.face %}
+            {% render_field form.position %}
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading"><strong>Management</strong></div>
+        <div class="panel-body">
+            {% render_field form.platform %}
+            {% render_field form.status %}
+            {% if obj %}{% render_field form.primary_ip %}{% endif %}
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading"><strong>Comments</strong></div>
+        <div class="panel-body">
+            {% render_field form.comments %}
+        </div>
+    </div>
+{% endblock %}

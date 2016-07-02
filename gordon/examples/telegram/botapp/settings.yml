@@ -1,0 +1,5 @@
+lambdas:
+  javascript_bot:
+    code: mybot
+    handler: code.handler
+    runtime: nodejs4.3

@@ -1,0 +1,15 @@
+---
+project: dynamodbpython
+default-region: eu-west-1
+code-bucket: gordon-dynamodbpython-0do1mc7
+apps:
+  - gordon.contrib.helpers
+  - gordon.contrib.lambdas
+  - exampleapp
+
+dynamodb:
+  example_dynamo_integration:
+    lambda: exampleapp.dynamoconsumer
+    stream: ref://DynamoIntegrationArn
+    batch_size: 10
+    starting_position: LATEST

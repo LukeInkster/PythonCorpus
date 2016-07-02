@@ -1,0 +1,284 @@
+/* Layout */
+* {
+    margin: 0;
+}
+html, body {
+    height: 100%;
+}
+body {
+    padding-top: 70px;
+}
+.container {
+    width: auto;
+    max-width: 1340px;
+}
+.wrapper {
+    min-height: 100%;
+    height: auto !important;
+    margin: 0 auto -61px; /* the bottom margin is the negative value of the footer's height */
+    padding-bottom: 30px;
+}
+.footer, .push {
+    height: 60px; /* .push must be the same height as .footer */
+}
+.footer {
+    background-color: #f5f5f5;
+    border-top: 1px solid #d0d0d0;
+}
+footer p {
+    margin: 20px 0;
+}
+
+/* Forms */
+label {
+    font-weight: normal;
+}
+label.required {
+    font-weight: bold;
+}
+
+/* Tables */
+th.pk, td.pk {
+    width: 30px;
+}
+
+
+/* Paginator */
+nav ul.pagination {
+    margin-top: 0;
+}
+
+
+/* Racks */
+div.rack_header {
+    margin-left: 36px;
+    text-align: center;
+    width: 200px;
+}
+ul.rack_legend {
+    float: left;
+    list-style-type: none;
+    margin-right: 6px;
+    padding: 0;
+    width: 30px;
+}
+ul.rack_legend li {
+    color: #c0c0c0;
+    display: block;
+    font-size: 10px;
+    height: 20px;
+    overflow: hidden;
+    padding: 5px 0;
+    text-align: right;
+}
+div.rack_frame {
+    float: left;
+    position: relative;
+}
+ul.rack {
+    border: 2px solid #404040;
+    float: left;
+    list-style-type: none;
+    padding: 0;
+    position: absolute;
+    width: 200px;
+}
+ul.rack li {
+    display: block;
+    font-size: 13px;
+    height: 20px;
+    overflow: hidden;
+    text-align: center;
+}
+ul.rack_empty li {
+    background-color: #f7f7f7;
+    border-bottom: 1px solid #dddddd;
+    height: 20px;
+}
+ul.rack li.empty:last-child {
+    border-bottom: 0;
+}
+ul.rack_far_face {
+    z-index: 100;
+}
+ul.rack_near_face {
+    z-index: 200;
+}
+ul.rack li.h2u { height: 40px; }
+ul.rack li.h2u a, ul.rack li.h2u span { padding: 10px 0; }
+ul.rack li.h3u { height: 60px; }
+ul.rack li.h3u a, ul.rack li.h3u span { padding: 20px 0; }
+ul.rack li.h4u { height: 80px; }
+ul.rack li.h4u a, ul.rack li.h4u span { padding: 30px 0; }
+ul.rack li.h5u { height: 100px; }
+ul.rack li.h5u a, ul.rack li.h5u span { padding: 40px 0; }
+ul.rack li.h6u { height: 120px; }
+ul.rack li.h6u a, ul.rack li.h6u span { padding: 50px 0; }
+ul.rack li.h7u { height: 140px; }
+ul.rack li.h7u a, ul.rack li.h7u span { padding: 60px 0; }
+ul.rack li.h8u { height: 160px; }
+ul.rack li.h8u a, ul.rack li.h8u span { padding: 70px 0; }
+ul.rack li.h9u { height: 180px; }
+ul.rack li.h9u a, ul.rack li.h9u span { padding: 80px 0; }
+ul.rack li.h10u { height: 200px; }
+ul.rack li.h10u a, ul.rack li.h10u span { padding: 90px 0; }
+ul.rack li.h11u { height: 220px; }
+ul.rack li.h11u a, ul.rack li.h11u span { padding: 100px 0; }
+ul.rack li.h12u { height: 240px; }
+ul.rack li.h12u a, ul.rack li.h12u span { padding: 110px 0; }
+ul.rack li.h13u { height: 260px; }
+ul.rack li.h13u a, ul.rack li.h13u span { padding: 120px 0; }
+ul.rack li.h14u { height: 280px; }
+ul.rack li.h14u a, ul.rack li.h14u span { padding: 130px 0; }
+ul.rack li.h15u { height: 300px; }
+ul.rack li.h15u a, ul.rack li.h15u span { padding: 140px 0; }
+ul.rack li.h16u { height: 320px; }
+ul.rack li.h16u a, ul.rack li.h16u span { padding: 150px 0; }
+ul.rack li.h17u { height: 340px; }
+ul.rack li.h17u a, ul.rack li.h17u span { padding: 160px 0; }
+ul.rack li.h18u { height: 360px; }
+ul.rack li.h18u a, ul.rack li.h18u span { padding: 170px 0; }
+ul.rack li.h19u { height: 380px; }
+ul.rack li.h19u a, ul.rack li.h19u span { padding: 180px 0; }
+ul.rack li.h20u { height: 400px; }
+ul.rack li.h20u a, ul.rack li.h20u span { padding: 190px 0; }
+ul.rack li.h21u { height: 420px; }
+ul.rack li.h21u a, ul.rack li.h21u span { padding: 200px 0; }
+ul.rack li.h22u { height: 440px; }
+ul.rack li.h22u a, ul.rack li.h22u span { padding: 210px 0; }
+ul.rack li.h23u { height: 460px; }
+ul.rack li.h23u a, ul.rack li.h23u span { padding: 220px 0; }
+ul.rack li.h24u { height: 480px; }
+ul.rack li.h24u a, ul.rack li.h24u span { padding: 230px 0; }
+ul.rack li.h25u { height: 500px; }
+ul.rack li.h25u a, ul.rack li.h25u span { padding: 240px 0; }
+ul.rack li.h26u { height: 520px; }
+ul.rack li.h26u a, ul.rack li.h26u span { padding: 250px 0; }
+ul.rack li.h27u { height: 540px; }
+ul.rack li.h27u a, ul.rack li.h27u span { padding: 260px 0; }
+ul.rack li.h28u { height: 560px; }
+ul.rack li.h28u a, ul.rack li.h28u span { padding: 270px 0; }
+ul.rack li.h29u { height: 580px; }
+ul.rack li.h29u a, ul.rack li.h29u span { padding: 280px 0; }
+ul.rack li.h30u { height: 600px; }
+ul.rack li.h30u a, ul.rack li.h30u span { padding: 290px 0; }
+ul.rack li.h31u { height: 620px; }
+ul.rack li.h31u a, ul.rack li.h31u span { padding: 300px 0; }
+ul.rack li.h32u { height: 640px; }
+ul.rack li.h32u a, ul.rack li.h32u span { padding: 310px 0; }
+ul.rack li.h33u { height: 660px; }
+ul.rack li.h33u a, ul.rack li.h33u span { padding: 320px 0; }
+ul.rack li.h34u { height: 680px; }
+ul.rack li.h34u a, ul.rack li.h34u span { padding: 330px 0; }
+ul.rack li.h35u { height: 700px; }
+ul.rack li.h35u a, ul.rack li.h35u span { padding: 340px 0; }
+ul.rack li.h36u { height: 720px; }
+ul.rack li.h36u a, ul.rack li.h36u span { padding: 350px 0; }
+ul.rack li.h37u { height: 740px; }
+ul.rack li.h37u a, ul.rack li.h37u span { padding: 360px 0; }
+ul.rack li.h38u { height: 760px; }
+ul.rack li.h38u a, ul.rack li.h38u span { padding: 370px 0; }
+ul.rack li.h39u { height: 780px; }
+ul.rack li.h39u a, ul.rack li.h39u span { padding: 380px 0; }
+ul.rack li.h40u { height: 800px; }
+ul.rack li.h40u a, ul.rack li.h40u span { padding: 390px 0; }
+ul.rack li.h41u { height: 820px; }
+ul.rack li.h41u a, ul.rack li.h41u span { padding: 400px 0; }
+ul.rack li.h42u { height: 840px; }
+ul.rack li.h42u a, ul.rack li.h42u span { padding: 410px 0; }
+ul.rack li.occupied a {
+    color: #ffffff;
+    display: block;
+    font-weight: bold;
+}
+ul.rack li.occupied a:hover {
+    text-decoration: none;
+}
+ul.rack li.occupied span {
+    display: block;
+}
+ul.rack_near_face li.empty {
+    border-bottom: 1px solid #e0e0e0;
+}
+ul.rack_near_face li.occupied {
+    color: #474747;
+}
+ul.rack_far_face li.occupied {
+    background: repeating-linear-gradient(
+        45deg,
+        #f7f7f7,
+        #f7f7f7 7px,
+        #f0f0f0 7px,
+        #f0f0f0 14px
+    );
+    color: #303030;
+}
+ul.rack_far_face li.blocked {
+    background: repeating-linear-gradient(
+        45deg,
+        #f7f7f7,
+        #f7f7f7 7px,
+        #ffc7c7 7px,
+        #ffc7c7 14px
+    );
+    border-bottom: 1px solid #e0e0e0;
+    color: #303030;
+}
+ul.rack_near_face li.empty a {
+    color: #0000ff;
+    display: none;
+    text-decoration: none;
+}
+ul.rack_near_face li.empty:hover {
+    background-color: #ffffff;
+}
+ul.rack_near_face li.empty:hover a {
+    display: block;
+}
+
+/* Rack elevation colors (from http://flatuicolors.com) */
+.teal { background-color: #1abc9c; border-bottom: 1px solid #16a085; }
+.teal:hover { background-color: #16a085; }
+.green { background-color: #2ecc71; border-bottom: 1px solid #27ae60; }
+.green:hover { background-color: #27ae60; }
+.blue { background-color: #3498db; border-bottom: 1px solid #2980b9; }
+.blue:hover { background-color: #2980b9; }
+.purple { background-color: #9b59b6; border-bottom: 1px solid #8e44ad; }
+.purple:hover { background-color: #8e44ad; }
+.yellow { background-color: #f1c40f; border-bottom: 1px solid #f39c12; }
+.yellow:hover { background-color: #f39c12; }
+.orange { background-color: #e67e22; border-bottom: 1px solid #d35400; }
+.orange:hover { background-color: #d35400; }
+.red { background-color: #e74c3c; border-bottom: 1px solid #c0392b; }
+.red:hover { background-color: #c0392b; }
+.light_gray { background-color: #dce2e3; border-bottom: 1px solid #bdc3c7; }
+.light_gray:hover { background-color: #bdc3c7; }
+.medium_gray { background-color: #95a5a6; border-bottom: 1px solid #7f8c8d; }
+.medium_gray:hover { background-color: #7f8c8d; }
+.dark_gray { background-color: #34495e; border-bottom: 1px solid #2c3e50; }
+.dark_gray:hover { background-color: #2c3e50; }
+
+/* Misc */
+.panel table {
+    margin-bottom: 0;
+}
+.panel .table th {
+    border-bottom-width: 1px;
+}
+.panel table tr.even:first-child td {
+    border-top: 0;
+}
+.panel .list-group {
+    max-height: 400px;
+    overflow: auto;
+}
+ul.nav-tabs, ul.nav-pills {
+    margin-bottom: 20px;
+}
+/* Fix progress bar margin inside table cells */
+td .progress {
+    margin-bottom: 0;
+}
+textarea {
+    font-family: Consolas, Lucida Console, monospace;
+}

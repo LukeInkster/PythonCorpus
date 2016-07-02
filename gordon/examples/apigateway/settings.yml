@@ -1,0 +1,74 @@
+---
+project: apigateway
+default-region: eu-west-1
+code-bucket: gordon-apigateway-0do1mc7
+apps:
+  - gordon.contrib.lambdas
+  - helloworld
+
+apigateway:
+    helloapi:
+        description: My first API
+        resources:
+            /:
+                methods: [GET, POST]
+                integration:
+                    lambda: helloworld.hellopy
+
+            /hi-from-js:
+                methods: GET
+                api_key_required: yes
+                integration:
+                    lambda: helloworld.hellojs
+
+            /404:
+                methods: GET
+                integration:
+                    lambda: helloworld.hellopy
+                    responses:
+                        - pattern: ""
+                          code: "404"
+                responses:
+                    - code: "404"
+
+            /parameters:
+                # http://docs.aws.amazon.com/apigateway/latest/developerguide/request-response-data-mappings.html
+                methods: GET
+                parameters:
+                    method.request.header.color: True
+                integration:
+                    lambda: helloworld.hellopy
+                    responses:
+                        - pattern: ""
+                          code: "200"
+                    parameters:
+                        integration.request.querystring.color: method.request.header.color
+                responses:
+                    - code: "200"
+                      parameters:
+                        method.response.header.color: color
+
+            /shop/{item}:
+                methods: GET
+                integration:
+                    lambda: helloworld.hellopy
+
+            /http:
+                methods: GET
+                integration:
+                    type: HTTP
+                    uri: http://www.terra.es
+
+            /mock:
+                methods: GET
+                integration:
+                    type: MOCK
+
+            /complex/implementation:
+                methods:
+                    GET:
+                        integration:
+                            lambda: helloworld.hellopy
+                    POST:
+                        integration:
+                            lambda: helloworld.hellojs

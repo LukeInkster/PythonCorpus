@@ -1,0 +1,13 @@
+*.pyc
+*.eggs
+*.egg-info
+htmlcov
+.coverage
+*.zip
+.gradle
+.tox
+__pycache__
+build
+dist
+_build
+docs/_build

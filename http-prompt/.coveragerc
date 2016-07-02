@@ -1,0 +1,7 @@
+[run]
+omit = http_prompt/ordereddict.py
+
+[report]
+show_missing = True
+exclude_lines =
+    nocover

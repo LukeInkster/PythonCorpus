@@ -1,0 +1,6 @@
+lambdas:
+  jsexample:
+    code: code.js
+    description: My description
+    memory: 192
+    timeout: 123
